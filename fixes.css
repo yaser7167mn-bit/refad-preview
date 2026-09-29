@@ -1,0 +1,26 @@
+@font-face{font-family:Arsenica;src:url('arsenica-regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Arsenica;src:url('arsenica-bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF}
+body,body *{font-family:Arsenica,Thmanyah,Tahoma,Arial,sans-serif!important;font-synthesis:none;letter-spacing:0}
+body,p,a,button,summary,span{font-weight:400}
+h1,h2,h3,strong,.hero-content h1,.company-name h3,.approach-list h3,.owner-signature strong,.nav-title,.footer-tagline{font-weight:700}
+h1 span,h2 span,h3 span{font-weight:inherit}
+.hero-description,.section-head p,.company-description,.intro-cinematic .intro-center p,.nav-description{font-weight:400}
+body{line-height:1.9}
+.hero-content h1{line-height:1.35}
+h2,.about-grid h2,.opportunity-box h2{line-height:1.5}
+.company-name>span{letter-spacing:0}
+html.intro-lock{overflow:hidden;overscroll-behavior:none;background:#edede9}
+body.intro-active{position:fixed;inset:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none;background:#edede9}
+body.intro-active:not(.intro-opening)>:not(#intro){visibility:hidden}
+.intro-cinematic{inset:0 0 auto;height:100vh;height:100lvh;min-height:100%;background:transparent;isolation:isolate;touch-action:none;outline:none}
+.intro-panel{z-index:0;top:0;bottom:-2px;width:50.2%}
+.intro-cinematic .intro-center{position:absolute;top:0;left:0;width:100%;height:100vh;height:100dvh;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:env(safe-area-inset-top) 24px env(safe-area-inset-bottom);transform:none}
+.intro-cinematic .intro-logo,.intro-cinematic .intro-rule{width:min(350px,68vw)}
+.intro-cinematic .intro-center p{line-height:1.8}
+.intro-cinematic.leaving .intro-center{transform:translateY(-16px)}
+.intro-location{display:none!important}
+.intro-active .reading-progress{visibility:hidden}
+.header{padding-top:env(safe-area-inset-top)}
+.menu-dialog{padding-top:max(24px,env(safe-area-inset-top));padding-bottom:max(24px,env(safe-area-inset-bottom))}
+@media(max-width:650px){.hero-content h1{font-size:54px}.hero-description{font-size:19px}.intro-cinematic .intro-center p{font-size:18px}.enter-site{font-size:18px}.nav-title{font-size:29px;line-height:1.5}}
+@media(max-width:360px){.hero-content h1{font-size:46px}}

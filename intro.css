@@ -1,0 +1,19 @@
+/* The original transparent wordmark is the entire opening composition */
+main[tabindex="-1"]:focus{outline:none}
+html.intro-lock,body.intro-active{background:#111210}
+.intro-signature{inset:0 0 auto;height:100vh;height:100lvh;min-height:100%;isolation:isolate;background:transparent;outline:none;touch-action:none;transition:none}
+.intro-signature::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#23251f 0%,#111210 65%);z-index:0;transition:opacity 1.1s cubic-bezier(.22,1,.36,1)}
+.signature-stage{position:absolute;inset:0 0 auto;height:100vh;height:100dvh;display:grid;place-items:center;padding:env(safe-area-inset-top) 7vw env(safe-area-inset-bottom);z-index:1}
+.signature-entry{display:block;width:min(540px,72vw);padding:24px 0;border:0;background:none;color:#eee;animation:signature-arrive 1.8s cubic-bezier(.16,1,.3,1) both;transition:opacity .7s,transform 1.2s cubic-bezier(.65,0,.2,1);cursor:pointer}
+.signature-entry:focus-visible{outline:1px solid #b9bdb0;outline-offset:18px}
+.signature-mark{display:block;position:relative;width:100%}
+.signature-mark img{display:block;width:100%;height:auto;filter:invert(1);opacity:.88}
+.signature-light{position:absolute;inset:0;mask:url('logo.png') center/contain no-repeat;-webkit-mask:url('logo.png') center/contain no-repeat;overflow:hidden}
+.signature-light::after{content:"";position:absolute;inset:-40% -100%;background:linear-gradient(110deg,transparent 40%,#fff0 44%,#fff 50%,#fff0 56%,transparent 60%);transform:translateX(-45%);animation:signature-sweep 2.1s .35s cubic-bezier(.4,0,.2,1) both}
+.intro-signature.leaving{transform:none;visibility:visible;pointer-events:none}
+.intro-signature.leaving::before{opacity:0}
+.intro-signature.leaving .signature-entry{animation:none;transform:scale(2.8);opacity:0}
+@keyframes signature-arrive{from{opacity:0;transform:translateY(16px) scale(.92);clip-path:inset(0 100% 0 0)}to{opacity:1;transform:none;clip-path:inset(0)}}
+@keyframes signature-sweep{to{transform:translateX(45%)}}
+@media(max-width:650px){.signature-entry{width:76vw}}
+@media(prefers-reduced-motion:reduce){.intro-signature:not([hidden]){display:block}.signature-entry,.signature-light::after{animation:none}.signature-light{display:none}.intro-signature.leaving{display:none}.intro-signature::before,.signature-entry{transition:none}}
